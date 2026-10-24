@@ -1,0 +1,279 @@
+/* =========================================
+   ПОДКЛЮЧЕНИЕ ШРИФТОВ
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Saira+Condensed:wght@400;500;700;900&display=swap');
+
+/* =========================================
+   БАЗОВЫЕ НАСТРОЙКИ
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FCF6D9;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.slide {
+    width: 100%;
+    max-width: 1280px;
+    height: 720px;
+    background-color: #FCF6D9;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+}
+
+/* =========================================
+   ОБЩИЕ ЭЛЕМЕНТЫ
+   ========================================= */
+.bg-line {
+    position: absolute;
+    border: 2px solid #A3C87C;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+.line-1 { width: 500px; height: 300px; top: -100px; left: -100px; transform: rotate(-20deg); }
+.line-2 { width: 600px; height: 400px; bottom: -150px; left: -150px; transform: rotate(45deg); }
+
+/* Зеленые звезды (ВАШИ картинки star1.png) */
+.green-star {
+    position: absolute;
+    z-index: 2;
+    object-fit: contain;
+}
+.gs-1 { width: 200px; height: 200px; top: 50px; left: 150px; transform: rotate(15deg); }
+.gs-2 { width: 250px; height: 250px; top: 100px; left: 450px; transform: rotate(45deg); }
+.gs-3 { width: 180px; height: 180px; top: 250px; left: 600px; transform: rotate(-20deg); }
+
+/* Желтые звезды (ВАШИ картинки star2.png) */
+.yellow-star {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 3;
+    object-fit: contain;
+    animation: spinAndFloat 20s linear infinite;
+}
+
+@keyframes spinAndFloat {
+    0% { transform: rotate(0deg) translate(0, 0); }
+    50% { transform: rotate(180deg) translate(15px, -15px); }
+    100% { transform: rotate(360deg) translate(0, 0); }
+}
+
+/* =========================================
+   СЛАЙД 1
+   ========================================= */
+.slide-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-text {
+    position: absolute;
+    top: 120px;
+    left: 150px;
+    display: flex;
+    align-items: baseline;
+    z-index: 10;
+}
+
+.letter {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 128px;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.rat-img { position: absolute; z-index: 15; width: 80px; }
+.rat-1 { top: 400px; left: 580px; transform: rotate(10deg); }
+
+.girl-img { position: absolute; z-index: 5; object-fit: contain; }
+.girl-1 { height: 450px; bottom: 0; right: 100px; }
+
+/* Позиции желтых звезд на 1 слайде (7 штук) */
+.ys-1 { top: 150px; right: 350px; }
+.ys-2 { top: 300px; right: 200px; animation-direction: reverse; }
+.ys-3 { top: 450px; right: 300px; animation-duration: 15s; }
+.ys-4 { top: 550px; right: 500px; animation-direction: reverse; }
+.ys-5 { top: 200px; right: 550px; animation-duration: 25s; }
+.ys-6 { top: 600px; right: 150px; animation-duration: 18s; }
+.ys-7 { top: 350px; right: 650px; animation-direction: reverse; }
+
+/* =========================================
+   СЛАЙД 2
+   ========================================= */
+.slide-2 {
+    padding: 60px 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 70px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 60px;
+    line-height: 1.1;
+    z-index: 10;
+}
+
+.schools-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 10;
+}
+
+.school-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.school-logo {
+    font-size: 40px;
+    font-weight: 700;
+    padding: 15px 30px;
+    border: 3px solid #000;
+    border-radius: 50px;
+    background: #FCF6D9;
+}
+
+.kodland { color: #3B3BFF; }
+.iserv { color: #000; }
+.yudaev { color: #7CB342; font-size: 30px; text-align: center; line-height: 1.1; }
+
+.school-info {
+    font-size: 20px;
+    padding: 8px 20px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    background: transparent;
+}
+
+.rat-2 { top: 230px; left: 750px; }
+
+.dog-img {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    height: 400px;
+    z-index: 5;
+    object-fit: contain;
+}
+
+/* Позиции желтых звезд на 2 слайде (3 штуки) */
+.ys-8 { top: 100px; right: 150px; }
+.ys-9 { top: 400px; right: 100px; animation-direction: reverse; }
+.ys-10 { bottom: 150px; right: 350px; animation-duration: 25s; }
+
+/* =========================================
+   СЛАЙД 3
+   ========================================= */
+.slide-3 {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.slide-3 .slide-title {
+    margin-bottom: 30px;
+    text-align: center;
+    z-index: 20; /* Заголовок поверх овалов */
+    position: relative;
+}
+
+/* Контейнер для овалов — опускаем ниже, чтобы не закрывал заголовок */
+.skills-container {
+    position: absolute;
+    top: 180px; /* Было top: 0, теперь опустили */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 180px); /* Остаток высоты */
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Базовый стиль овалов */
+.skill-oval {
+    position: absolute;
+    border: 2px solid #000;
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-size: 20px;
+    font-weight: 700;
+    background: #FCF6D9;
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+/* Расстановка по кругу (уже с учётом нового контейнера) */
+.skill-1 { top: 5%;  left: 15%; }
+.skill-2 { top: 0%;  left: 42%; }
+.skill-3 { top: 5%;  right: 15%; }
+.skill-4 { top: 30%; left: 10%; }
+.skill-5 { top: 35%; right: 10%; }
+.skill-6 { top: 50%; left: 12%; }
+.skill-7 { bottom: 10%; left: 20%; }
+.skill-8 { bottom: 5%;  left: 45%; }
+.skill-9 { bottom: 10%; right: 20%; }
+
+/* Лёгкое покачивание */
+@keyframes sway1 {
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    50%  { transform: translate(2px, -3px) rotate(1deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes sway2 {
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    50%  { transform: translate(-2px, 2px) rotate(-1deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes sway3 {
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    50%  { transform: translate(3px, 2px) rotate(0.5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.skill-1 { animation: sway1 5s ease-in-out infinite; }
+.skill-2 { animation: sway2 6s ease-in-out infinite 0.3s; }
+.skill-3 { animation: sway3 7s ease-in-out infinite 0.7s; }
+.skill-4 { animation: sway1 4s ease-in-out infinite 1s; }
+.skill-5 { animation: sway2 8s ease-in-out infinite 0.5s; }
+.skill-6 { animation: sway3 6s ease-in-out infinite 1.2s; }
+.skill-7 { animation: sway1 7s ease-in-out infinite 0.2s; }
+.skill-8 { animation: sway2 5s ease-in-out infinite 0.9s; }
+.skill-9 { animation: sway3 9s ease-in-out infinite 0.4s; }
+
+/* Девочка по центру, поднята на 60px от низа */
+.girl-3 {
+    position: absolute;
+    bottom: 60px; /* Подняли на 60px */
+    left: 50%;
+    transform: translateX(-50%);
+    height: 400px;
+    z-index: 5;
+}
+
+/* Позиции желтых звезд на 3 слайде */
+.ys-11 { top: 150px; left: 100px; }
+.ys-12 { top: 200px; right: 150px; animation-direction: reverse; }
+.ys-13 { bottom: 150px; right: 100px; animation-duration: 22s; }
