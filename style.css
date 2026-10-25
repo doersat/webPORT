@@ -1,11 +1,6 @@
-/* =========================================
-   ПОДКЛЮЧЕНИЕ ШРИФТОВ
-   ========================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Saira+Condensed:wght@400;500;700;900&display=swap');
 
-/* =========================================
-   БАЗОВЫЕ НАСТРОЙКИ
-   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -30,9 +25,7 @@ body {
     box-shadow: none;
 }
 
-/* =========================================
-   ОБЩИЕ ЭЛЕМЕНТЫ
-   ========================================= */
+
 .bg-line {
     position: absolute;
     border: 2px solid #A3C87C;
@@ -42,7 +35,7 @@ body {
 .line-1 { width: 500px; height: 300px; top: -100px; left: -100px; transform: rotate(-20deg); }
 .line-2 { width: 600px; height: 400px; bottom: -150px; left: -150px; transform: rotate(45deg); }
 
-/* Зеленые звезды (ВАШИ картинки star1.png) */
+
 .green-star {
     position: absolute;
     z-index: 2;
@@ -52,7 +45,7 @@ body {
 .gs-2 { width: 250px; height: 250px; top: 100px; left: 450px; transform: rotate(45deg); }
 .gs-3 { width: 180px; height: 180px; top: 250px; left: 600px; transform: rotate(-20deg); }
 
-/* Желтые звезды (ВАШИ картинки star2.png) */
+
 .yellow-star {
     position: absolute;
     width: 80px;
@@ -68,9 +61,7 @@ body {
     100% { transform: rotate(360deg) translate(0, 0); }
 }
 
-/* =========================================
-   СЛАЙД 1
-   ========================================= */
+
 .slide-1 {
     display: flex;
     justify-content: center;
@@ -101,7 +92,7 @@ body {
 .girl-img { position: absolute; z-index: 5; object-fit: contain; }
 .girl-1 { height: 450px; bottom: 0; right: 100px; }
 
-/* Позиции желтых звезд на 1 слайде (7 штук) */
+
 .ys-1 { top: 150px; right: 350px; }
 .ys-2 { top: 300px; right: 200px; animation-direction: reverse; }
 .ys-3 { top: 450px; right: 300px; animation-duration: 15s; }
@@ -110,9 +101,7 @@ body {
 .ys-6 { top: 600px; right: 150px; animation-duration: 18s; }
 .ys-7 { top: 350px; right: 650px; animation-direction: reverse; }
 
-/* =========================================
-   СЛАЙД 2
-   ========================================= */
+
 .slide-2 {
     padding: 60px 100px;
     display: flex;
@@ -180,9 +169,7 @@ body {
 .ys-9 { top: 400px; right: 100px; animation-direction: reverse; }
 .ys-10 { bottom: 150px; right: 350px; animation-duration: 25s; }
 
-/* =========================================
-   СЛАЙД 3
-   ========================================= */
+
 .slide-3 {
     padding-top: 60px;
     display: flex;
@@ -194,22 +181,22 @@ body {
 .slide-3 .slide-title {
     margin-bottom: 30px;
     text-align: center;
-    z-index: 20; /* Заголовок поверх овалов */
+    z-index: 20; 
     position: relative;
 }
 
-/* Контейнер для овалов — опускаем ниже, чтобы не закрывал заголовок */
+
 .skills-container {
     position: absolute;
-    top: 180px; /* Было top: 0, теперь опустили */
+    top: 180px; 
     left: 0;
     width: 100%;
-    height: calc(100% - 180px); /* Остаток высоты */
+    height: calc(100% - 180px); 
     z-index: 10;
     pointer-events: none;
 }
 
-/* Базовый стиль овалов */
+
 .skill-oval {
     position: absolute;
     border: 2px solid #000;
@@ -223,7 +210,7 @@ body {
     pointer-events: auto;
 }
 
-/* Расстановка по кругу (уже с учётом нового контейнера) */
+
 .skill-1 { top: 5%;  left: 15%; }
 .skill-2 { top: 0%;  left: 42%; }
 .skill-3 { top: 5%;  right: 15%; }
@@ -234,7 +221,7 @@ body {
 .skill-8 { bottom: 5%;  left: 45%; }
 .skill-9 { bottom: 10%; right: 20%; }
 
-/* Лёгкое покачивание */
+
 @keyframes sway1 {
     0%   { transform: translate(0, 0) rotate(0deg); }
     50%  { transform: translate(2px, -3px) rotate(1deg); }
@@ -263,17 +250,17 @@ body {
 .skill-8 { animation: sway2 5s ease-in-out infinite 0.9s; }
 .skill-9 { animation: sway3 9s ease-in-out infinite 0.4s; }
 
-/* Девочка по центру, поднята на 60px от низа */
+
 .girl-3 {
     position: absolute;
-    bottom: 60px; /* Подняли на 60px */
+    bottom: 60px; 
     left: 50%;
     transform: translateX(-50%);
     height: 400px;
     z-index: 5;
 }
 
-/* Позиции желтых звезд на 3 слайде */
+
 .ys-11 { top: 150px; left: 100px; }
 .ys-12 { top: 200px; right: 150px; animation-direction: reverse; }
 .ys-13 { bottom: 150px; right: 100px; animation-duration: 22s; }
