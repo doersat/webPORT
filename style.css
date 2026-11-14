@@ -264,3 +264,65 @@ body {
 .ys-11 { top: 150px; left: 100px; }
 .ys-12 { top: 200px; right: 150px; animation-direction: reverse; }
 .ys-13 { bottom: 150px; right: 100px; animation-duration: 22s; }
+/* === АДАПТАЦИЯ ПОД ТЕЛЕФОН (ДОБАВЛЕНО) === */
+
+/* 1. Запрещаем горизонтальную прокрутку и задаём базовые отступы */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 16px; /* Читаемый размер шрифта */
+  line-height: 1.5;
+}
+
+/* 2. Делаем все контейнеры гибкими */
+* {
+  box-sizing: border-box;
+}
+
+.container, main, .wrapper, section {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+/* 3. Адаптируем карточки школ и навыков */
+/* Этот код заставит их выстраиваться в одну колонку на телефоне */
+.card, .skill, .school-item, .item, 
+div[class*="card"], div[class*="skill"], div[class*="school"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-bottom: 15px;
+}
+
+/* 4. Если используется flex-сетка, разрешаем перенос */
+.flex-container, .skills-list, .schools-list, 
+div[class*="flex"], div[class*="list"], div[class*="grid"] {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* 5. Картинки и видео не вылезут за экран */
+img, video, iframe {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* 6. Увеличиваем кнопки и ссылки для удобного нажатия пальцем */
+a, button, .btn, .link {
+  padding: 12px 16px !important;
+  font-size: 16px !important;
+  display: inline-block;
+  text-align: center;
+}
+
+/* 7. Переносим длинные слова в заголовках */
+h1, h2, h3 {
+  word-wrap: break-word;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
