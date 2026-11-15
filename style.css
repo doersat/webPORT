@@ -373,3 +373,14 @@ body {
         bottom: 0 !important;
     }
 }
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 1000;
+  background-color: #ffffff;
+  height: 80px; 
+}
+main {
+  margin-top: 80px; 
